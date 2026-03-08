@@ -712,6 +712,7 @@ section {
 
     .hero-text h1 {
         font-size: 2.2rem;
+        margin-top: 5rem; /* Moves heading ~3 lines lower */
         margin-bottom: 0.5rem;
     }
 
