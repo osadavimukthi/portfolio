@@ -176,7 +176,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 5rem;
+    gap: 6rem; /* Increased from 5rem for more spacing */
     max-width: 1100px;
     width: 100%;
     padding: 2rem 0;
@@ -301,7 +301,7 @@ section {
     .hero-main {
         flex-direction: column;
         text-align: center;
-        gap: 3rem;
+        gap: 5rem; /* Increased from 4rem for more spacing */
     }
     .hero-image {
         width: 220px;
@@ -691,13 +691,13 @@ section {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 0; /* Using margins for specific spacing */
+        gap: 4rem; /* Increased from 3rem for more spacing */
     }
 
     .hero-image {
         width: 180px;
         height: 180px;
-        margin: 0 auto 2cm; /* Exactly 2cm space below image */
+        margin: 0 auto 0; /* Removed bottom margin, using gap instead */
         order: -1;
     }
 
@@ -712,8 +712,7 @@ section {
 
     .hero-text h1 {
         font-size: 2.2rem;
-        margin-top: 0; /* Resetting previous margin to ensure exact 2cm gap */
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Consistent with other breakpoints */
     }
 
     .typing-container {
