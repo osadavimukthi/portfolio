@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osada Vimukthi | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Background Particles -->
     <div id="particles-js"></div>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">OSADA<span>.</span></a>
+        <div class="container">
+            <div class="logo">OSADA<span>.</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -28,51 +26,65 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <div class="profile-img-container">
-                <img src="ProfilePhoto.jpeg" alt="Osada Vimukthi" class="profile-img">
-                <div class="glow-ring"></div>
-            </div>
-            <h1>Hi, I'm <span class="highlight">Osada Vimukthi</span></h1>
-            <h2 class="typing-text"></h2>
-            <p>BSc in Computer Science Undergraduate at UCSC. Aspiring Researcher in Advanced Computing.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn">View Projects</a>
-                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+        <div class="container hero-content">
+            <div class="hero-main reveal">
+                <div class="hero-image">
+                    <div class="image-glow"></div>
+                    <div class="image-wrapper">
+                        <img src="ProfilePhoto.jpeg" alt="Osada Vimukthi">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Osada Vimukthi</span></h1>
+                    <h2 class="typing-container"><span id="typing-text"></span></h2>
+                    <p class="hero-description">
+                        BSc in Computer Science Undergraduate at the University of Colombo School of Computing. 
+                        Interested in Quantum Computing, Artificial Intelligence and Virtual Reality.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <a href="#about" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
-        </a>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about section-padding">
+    <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text" data-aos="fade-right">
-                    <p>I am a BSc in Computer Science undergraduate at the <strong>University of Colombo School of Computing</strong>. I am a technology enthusiast interested in modern fields such as <strong>Quantum Computing</strong>, <strong>Artificial Intelligence</strong>, and <strong>Virtual Reality</strong>.</p>
-                    <p>I enjoy exploring new technologies and building projects. My long-term goal is to become a researcher in advanced computing fields, pushing the boundaries of what's possible with modern hardware and software.</p>
+            <h2 class="section-title reveal">About Me</h2>
+            <div class="about-container reveal">
+                <div class="about-text">
+                    <p>
+                        I am a BSc in Computer Science undergraduate at the University of Colombo School of Computing. 
+                        I am a technology enthusiast interested in modern fields such as Quantum Computing, 
+                        Artificial Intelligence, and Virtual Reality. I enjoy exploring new technologies and building projects. 
+                        My long-term goal is to become a researcher in advanced computing fields.
+                    </p>
                 </div>
-                <div class="about-stats" data-aos="fade-left">
-                    <div class="stat-card">
+                <div class="about-cards">
+                    <div class="info-card">
                         <i class="fas fa-location-dot"></i>
-                        <span>Katubedda, Sri Lanka</span>
+                        <div class="info-content">
+                            <span>Location</span>
+                            <p>Katubedda, Sri Lanka</p>
+                        </div>
                     </div>
-                    <div class="stat-card">
+                    <div class="info-card">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>UCSC Undergraduate</span>
+                        <div class="info-content">
+                            <span>Education</span>
+                            <p>UCSC Undergraduate</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,41 +92,40 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section-padding">
+    <section id="skills" class="skills section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Skills & Tools</h2>
+            <h2 class="section-title reveal">My Skills</h2>
             <div class="skills-grid">
-                <!-- Programming -->
-                <div class="skill-category" data-aos="zoom-in">
-                    <h3>Programming</h3>
+                <!-- Programming Languages -->
+                <div class="skill-category reveal">
+                    <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> C</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
                     </div>
                 </div>
-                <!-- Web Dev -->
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="100">
+                <!-- Web Development -->
+                <div class="skill-category reveal">
                     <h3>Web Development</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
                     </div>
                 </div>
                 <!-- Database -->
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="200">
+                <div class="skill-category reveal">
                     <h3>Database</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-tag">SQL</span>
                     </div>
                 </div>
                 <!-- Tools -->
-                <div class="skill-category" data-aos="zoom-in" data-aos-delay="300">
+                <div class="skill-category reveal">
                     <h3>Tools</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="skill-tag"><i class="fas fa-terminal"></i> VS Code</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">GitHub</span>
                     </div>
                 </div>
             </div>
@@ -122,23 +133,23 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects section-padding">
+    <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <h2 class="section-title reveal">Projects</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-aos="fade-up">
-                    <div class="project-content">
+                <!-- Project Card -->
+                <div class="project-card reveal">
+                    <div class="project-info">
                         <h3>Vibe Coding</h3>
-                        <p>Exploring AI-assisted development by using several AI tools to generate programs and web pages, streamlining the building process.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
+                        <p>In this project I used several AI tools to generate programs and web pages. The goal of the project was to explore AI-assisted development and understand how modern AI tools can help developers build applications faster.</p>
+                        <div class="project-tags">
                             <span>HTML</span>
                             <span>CSS</span>
+                            <span>Python</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/osadavimukthi/Vibe_Coding.git" target="_blank" class="github-link">
-                                <i class="fab fa-github"></i> Repository
+                            <a href="https://github.com/osadavimukthi/Vibe_Coding.git" target="_blank" class="btn-icon">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -148,40 +159,52 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education section-padding">
+    <section id="education" class="education section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <h2 class="section-title reveal">Education</h2>
             <div class="timeline">
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
+                <!-- UCSC -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-logo">
+                        <img src="ucsc.png" alt="UCSC Logo">
+                    </div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Present</span>
+                        <p class="year">2025 – Present</p>
                         <h3>University of Colombo School of Computing</h3>
                         <p>BSc in Computer Science (Undergraduate)</p>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
+                <!-- DS -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-logo">
+                        <img src="DS.png" alt="DS Logo">
+                    </div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2023 – 2025</span>
+                        <p class="year">2023 – 2025</p>
                         <h3>D.S. Senanayake College, Colombo 07</h3>
                         <p>A/L Mathematics Stream</p>
                         <p class="result">Result: 3A passes (Combined Maths, Physics, ICT)</p>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-left">
-                    <div class="timeline-dot"></div>
+                <!-- RMC -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-logo">
+                        <img src="RMC.png" alt="RMC Logo">
+                    </div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2016 – 2022</span>
-                        <h3>Methodist College, Rawatawatta</h3>
+                        <p class="year">2012 – 2022</p>
+                        <h3>Methodist College Rawatawatta</h3>
                         <p>G.C.E Ordinary Level</p>
                         <p class="result">Result: 9A passes</p>
                     </div>
                 </div>
-                <div class="timeline-item" data-aos="fade-right">
-                    <div class="timeline-dot"></div>
+                <!-- De Soyza -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-logo">
+                        <img src="soyza.png" alt="De Soyza Logo">
+                    </div>
                     <div class="timeline-content">
-                        <span class="timeline-date">2011 – 2015</span>
+                        <p class="year">2006 – 2011</p>
                         <h3>De Soyza Maha Vidyalaya</h3>
                         <p>Primary Education</p>
                     </div>
@@ -191,46 +214,37 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
+    <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
-            <div class="contact-container" data-aos="zoom-in">
-                <div class="contact-info">
-                    <p>I'm always open to discussing new projects, research opportunities, or partnerships.</p>
-                    <div class="contact-links">
-                        <a href="mailto:osadavimuk@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>osadavimuk@gmail.com</span>
-                        </a>
-                        <a href="https://github.com/osadavimukthi" target="_blank" class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/osadavimukthi</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/osada-vimukthi-926985344/" target="_blank" class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
-                        </a>
-                    </div>
-                </div>
+            <h2 class="section-title reveal">Get In Touch</h2>
+            <div class="contact-grid reveal">
+                <a href="mailto:osadavimuk@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                    <p>osadavimuk@gmail.com</p>
+                </a>
+                <a href="https://github.com/osadavimukthi" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <p>github.com/osadavimukthi</p>
+                </a>
+                <a href="https://www.linkedin.com/in/osada-vimukthi-926985344/" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                    <p>linkedin.com/in/osada-vimukthi</p>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="social-footer">
-                <a href="https://github.com/osadavimukthi" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/osada-vimukthi-926985344/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:osadavimuk@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
             <p>&copy; 2026 Osada Vimukthi. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
