@@ -680,30 +680,33 @@ section {
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 100px; /* Space for navbar */
-        min-height: auto;
+        padding-top: 130px; /* Generous space to clear fixed navbar */
+        padding-bottom: 4rem;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
     }
 
     .hero-main {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 6rem; /* Increased to 6rem to prevent overlapping on mobile */
+        gap: 0;
+        width: 100%;
     }
 
     .hero-image {
-        width: 180px;
-        height: 180px;
-        margin: 0 auto 0; /* Removed bottom margin, using gap instead */
+        width: 160px;
+        height: 160px;
+        margin: 0 auto 2.5rem; /* Centered with clear space below image */
         order: -1;
     }
 
     .image-glow {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
 
     .hero-text {
@@ -712,12 +715,18 @@ section {
 
     .hero-text h1 {
         font-size: 2.2rem;
-        margin-bottom: 0.5rem; /* Consistent with other breakpoints */
+        margin-bottom: 0.8rem;
     }
 
     .typing-container {
         font-size: 1.2rem;
         justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin: 1rem 0 2rem;
     }
 
     .hero-btns {
@@ -749,4 +758,22 @@ section {
     .btn-outline {
         margin-left: 0;
     }
+}
+@media (max-width: 768px){
+
+.hero{
+padding-top:120px;
+}
+
+.hero-content{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+.profile-img-container{
+margin-bottom:30px;
+}
+
 }
