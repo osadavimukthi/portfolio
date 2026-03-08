@@ -94,9 +94,7 @@ section {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 1px;
-}
-
-.logo span {
+    white-space: nowrap;
     color: var(--primary-color);
 }
 
@@ -294,6 +292,27 @@ section {
 }
 
 @media (max-width: 992px) {
+    .navbar .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        display: none; /* Hide links earlier to prevent horizontal overlap */
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 120px; /* Navbar is 80px + 40px buffer */
+        padding-bottom: 60px;
+        display: flex;
+        align-items: center;
+    }
+
     .hero-main {
         flex-direction: column;
         text-align: center;
