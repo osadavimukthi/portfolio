@@ -697,7 +697,7 @@ section {
     .hero-image {
         width: 180px;
         height: 180px;
-        margin: 0 auto 2rem; /* Center and add space below image */
+        margin: 0 auto 2cm; /* Exactly 2cm space below image */
         order: -1;
     }
 
@@ -712,7 +712,7 @@ section {
 
     .hero-text h1 {
         font-size: 2.2rem;
-        margin-top: 5rem; /* Moves heading ~3 lines lower */
+        margin-top: 0; /* Resetting previous margin to ensure exact 2cm gap */
         margin-bottom: 0.5rem;
     }
 
